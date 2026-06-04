@@ -1,0 +1,222 @@
+.create-listing-page {
+  min-height: 100vh;
+  background: var(--bg-primary);
+  padding-bottom: 100px;
+}
+
+.create-listing-page .page-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.create-listing-page .back-button {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.create-listing-page .back-button:hover {
+  background: var(--bg-tertiary);
+}
+
+.create-listing-page .page-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.create-listing-page .form-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.create-listing-page .form-section {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  margin-bottom: 20px;
+}
+
+.create-listing-page .section-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.create-listing-page .form-group {
+  margin-bottom: 20px;
+}
+
+.create-listing-page .form-label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.create-listing-page .form-input,
+.create-listing-page .form-textarea,
+.create-listing-page .form-select {
+  width: 100%;
+  padding: 12px;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  color: var(--text-primary);
+  font-size: 16px;
+  transition: all 0.2s ease;
+}
+
+.create-listing-page .form-input:focus,
+.create-listing-page .form-textarea:focus,
+.create-listing-page .form-select:focus {
+  outline: none;
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1);
+}
+
+.create-listing-page .form-textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.create-listing-page .image-upload {
+  border: 2px dashed var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 40px 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.create-listing-page .image-upload:hover {
+  border-color: var(--accent-primary);
+  background: var(--bg-tertiary);
+}
+
+.create-listing-page .image-upload-icon {
+  width: 48px;
+  height: 48px;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+}
+
+.create-listing-page .image-upload-text {
+  color: var(--text-secondary);
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.create-listing-page .image-upload-subtext {
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+.create-listing-page .preview-images {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.create-listing-page .preview-image {
+  aspect-ratio: 1;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  position: relative;
+}
+
+.create-listing-page .preview-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.create-listing-page .remove-image {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: rgba(0, 0, 0, 0.6);
+  border: none;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.create-listing-page .remove-image:hover {
+  background: rgba(239, 68, 68, 0.8);
+}
+
+.create-listing-page .submit-button {
+  width: 100%;
+  padding: 16px;
+  background: var(--accent-primary);
+  color: white;
+  border: none;
+  border-radius: var(--radius-lg);
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.create-listing-page .submit-button:hover {
+  background: var(--accent-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+/* Адаптивность для маленьких экранов */
+@media (max-width: 480px) {
+  .create-listing-page {
+    padding-bottom: 120px;
+  }
+
+  .create-listing-page .page-title {
+    font-size: 20px;
+  }
+
+  .create-listing-page .form-section {
+    padding: 16px;
+  }
+
+  .create-listing-page .section-title {
+    font-size: 16px;
+  }
+
+  .create-listing-page .preview-images {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 360px) {
+  .create-listing-page .preview-images {
+    grid-template-columns: 1fr;
+  }
+
+  .create-listing-page .form-input,
+  .create-listing-page .form-textarea {
+    font-size: 14px;
+  }
+}

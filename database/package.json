@@ -1,0 +1,12 @@
+{
+  "name": "telegram-marketplace-database",
+  "version": "1.0.0",
+  "description": "Database setup for Telegram Marketplace",
+  "main": "setup.js",
+  "scripts": {
+    "setup": "node setup.js"
+  },
+  "dependencies": {
+    "pg": "^8.11.3"
+  }
+}
